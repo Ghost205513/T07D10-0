@@ -15,7 +15,7 @@ int main() {
     int mod;
 
     if (scanf("%d", &mod) == 0) {
-        printf("n/a\n");
+        printf("n/a");
 
     } else {
         switch (mod) {
@@ -29,7 +29,7 @@ int main() {
                 menu_mod3();
                 break;
             default:
-                printf("n/a\n");
+                printf("n/a");
         }
     }
 }
@@ -38,9 +38,9 @@ void menu_mod1() {
     int rows, columns;
 
     if (scanf("%d", &rows) == 0 || rows <= 0) {
-        printf("n/a\n");
+        printf("n/a");
     } else if (scanf("%d", &columns) == 0 || columns <= 0) {
-        printf("n/a\n");
+        printf("n/a");
     } else {
         int **single_array_matrix;
         int *pointer2row;
@@ -52,7 +52,7 @@ void menu_mod1() {
             single_array_matrix[i] = pointer2row + columns * i;
 
         if (input(single_array_matrix, rows, columns) == 1) {
-            printf("n/a\n");
+            printf("n/a");
         } else {
             quick_sort(single_array_matrix, rows, columns);
             output(single_array_matrix, rows, columns);
@@ -66,9 +66,9 @@ void menu_mod2() {
     int rows, columns;
 
     if (scanf("%d", &rows) == 0 || rows <= 0) {
-        printf("n/a\n");
+        printf("n/a");
     } else if (scanf("%d", &columns) == 0 || columns <= 0) {
-        printf("n/a\n");
+        printf("n/a");
     } else {
         int **pointers_matrix;
 
@@ -78,7 +78,7 @@ void menu_mod2() {
             pointers_matrix[i] = malloc(columns * sizeof(int));
 
         if (input(pointers_matrix, rows, columns) == 1) {
-            printf("n/a\n");
+            printf("n/a");
         } else {
             quick_sort(pointers_matrix, rows, columns);
             output(pointers_matrix, rows, columns);
@@ -95,9 +95,9 @@ void menu_mod3() {
     int rows, columns;
 
     if (scanf("%d", &rows) == 0 || rows <= 0) {
-        printf("n/a\n");
+        printf("n/a");
     } else if (scanf("%d", &columns) == 0 || columns <= 0) {
-        printf("n/a\n");
+        printf("n/a");
     } else {
         int **pointers2single_array_matrix;
         int *single_array_of_pointers;
@@ -109,7 +109,7 @@ void menu_mod3() {
             pointers2single_array_matrix[i] = single_array_of_pointers + columns * i;
 
         if (input(pointers2single_array_matrix, rows, columns) == 1) {
-            printf("n/a\n");
+            printf("n/a");
         } else {
             quick_sort(pointers2single_array_matrix, rows, columns);
             output(pointers2single_array_matrix, rows, columns);
